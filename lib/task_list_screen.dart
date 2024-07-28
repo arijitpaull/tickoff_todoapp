@@ -74,10 +74,10 @@ class _TaskListScreenState extends State<TaskListScreen> {
                       subtitle: Text(task.description),
                       trailing: Text(task.priority),
                       onLongPress: () {
-                        _deleteTask(index);
+                        _deleteTask(task);
                       },
                       onTap: () {
-                        _showTaskForm(context, task: task, index: index);
+                        _showTaskForm(context, task: task);
                       },
                     );
                   },
@@ -94,18 +94,17 @@ class _TaskListScreenState extends State<TaskListScreen> {
     );
   }
 
-  void _deleteTask(int index) {
-    taskBox.deleteAt(index);
+  void _deleteTask(Task task) {
+    task.delete();
     _updateSearchQuery(); 
   }
 
-  void _showTaskForm(BuildContext context, {Task? task, int? index}) {
+  void _showTaskForm(BuildContext context, {Task? task}) {
     showModalBottomSheet(
       context: context,
       builder: (_) {
         return TaskForm(
           task: task,
-          index: index,
         );
       },
     ).then((_) {
