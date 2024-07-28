@@ -1,16 +1,11 @@
 # tickoff
 
-A new Flutter project.
+A flutter assignment; assigned by Quantum IT Innovation - by Arijit Paul
 
-## Getting Started
+## Thought process
 
-This project is a starting point for a Flutter application.
+I named this project tickoff.
+This is a todo list app where you can set your priority level as low, medium and hight. 
+I kept the design and UI minimal for the ease of use and made less complications to deliver more features, while keeping the size of the app minimum.
+This uses encrypted local storage package for flutter called Hive DB for accessing permanent offline storage of the device.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
